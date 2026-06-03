@@ -1,0 +1,207 @@
+[
+  {
+    "id": "bill_01",
+    "category": "billing",
+    "question": "What payment methods do you accept?",
+    "answer": "ShopGlide accepts all major credit cards including Visa, Mastercard, American Express, and Discover. We also support digital wallets like PayPal, Apple Pay, and Google Pay. We currently do not accept personal checks, wire transfers, or Cash on Delivery (COD).",
+    "tags": [
+      "payment methods",
+      "credit cards",
+      "paypal",
+      "apple pay",
+      "google pay"
+    ]
+  },
+  {
+    "id": "bill_02",
+    "category": "billing",
+    "question": "How can I request a refund?",
+    "answer": "You can request a refund within 30 days of purchase for any unused, unopened items. To initiate a refund, log into your ShopGlide account, navigate to 'Order History', select the order, and click 'Request Refund'. Refunds are processed back to the original payment method within 5-7 business days.",
+    "tags": [
+      "refund policy",
+      "return window",
+      "money back",
+      "cancel order"
+    ]
+  },
+  {
+    "id": "bill_03",
+    "category": "billing",
+    "question": "Why was my payment card declined?",
+    "answer": "Card payments can fail due to incorrect CVV/expiration dates, insufficient funds, or fraud prevention blocks from your bank. We recommend double-checking your billing details or contacting your bank. You can also try using alternative payment methods like PayPal.",
+    "tags": [
+      "failed payment",
+      "declined card",
+      "payment failure",
+      "billing error"
+    ]
+  },
+  {
+    "id": "bill_04",
+    "category": "billing",
+    "question": "How do I download my monthly invoices?",
+    "answer": "Monthly invoices are automatically generated and emailed to the billing contact on record. You can also download them directly by going to Account Settings > Billing & Invoices, selecting the desired billing cycle, and clicking 'Download PDF'.",
+    "tags": [
+      "invoice",
+      "receipt",
+      "billing document",
+      "pdf invoice"
+    ]
+  },
+  {
+    "id": "ship_01",
+    "category": "shipping",
+    "question": "How long does shipping take and what are the rates?",
+    "answer": "Standard domestic shipping takes 3-5 business days and is free for orders over $50 (otherwise a flat rate of $4.99 applies). Express shipping takes 1-2 business days and costs $14.99. International shipping takes 7-14 business days with rates calculated at checkout based on weight and destination.",
+    "tags": [
+      "shipping times",
+      "delivery rates",
+      "shipping speed",
+      "free shipping"
+    ]
+  },
+  {
+    "id": "ship_02",
+    "category": "shipping",
+    "question": "Do you ship internationally?",
+    "answer": "Yes, ShopGlide ships to over 50 countries worldwide. Please note that international orders may be subject to local import duties, taxes, or customs clearance fees which are the sole responsibility of the customer and are collected upon delivery.",
+    "tags": [
+      "international shipping",
+      "customs fees",
+      "global delivery",
+      "duties"
+    ]
+  },
+  {
+    "id": "ship_03",
+    "category": "shipping",
+    "question": "How do I track my order?",
+    "answer": "Once your order ships, we will email you a tracking number and a link to the carrier page (USPS, UPS, or DHL). You can also track shipments directly in your ShopGlide account portal under 'My Orders' > 'Track Package'.",
+    "tags": [
+      "tracking number",
+      "order status",
+      "shipment tracking",
+      "find package"
+    ]
+  },
+  {
+    "id": "ship_04",
+    "category": "shipping",
+    "question": "What should I do if my package is lost or damaged?",
+    "answer": "If your package is marked as delivered but you haven't received it, or if it arrived damaged, contact our Support team within 7 days at support@shopglide.com. For damaged items, please attach clear photos of the packaging and product so we can expedite a replacement or refund.",
+    "tags": [
+      "lost package",
+      "damaged item",
+      "missing order",
+      "transit issues"
+    ]
+  },
+  {
+    "id": "sec_01",
+    "category": "account security",
+    "question": "How do I enable two-factor authentication (2FA)?",
+    "answer": "To protect your account, go to Account Settings > Security > Two-Factor Authentication. Click 'Enable 2FA' and scan the QR code using an authenticator app like Google Authenticator or Authy. Enter the 6-digit confirmation code to finish the setup.",
+    "tags": [
+      "two factor authentication",
+      "2fa setup",
+      "google authenticator",
+      "login protection"
+    ]
+  },
+  {
+    "id": "sec_02",
+    "category": "account security",
+    "question": "How do I reset a forgotten password?",
+    "answer": "If you forgot your password, click 'Forgot Password' on the login screen. Enter your registered email address, and we will send you a password reset link valid for 1 hour. Follow the instructions in the email to set up a new, secure password.",
+    "tags": [
+      "forgot password",
+      "password reset",
+      "change password",
+      "login issues"
+    ]
+  },
+  {
+    "id": "sec_03",
+    "category": "account security",
+    "question": "What should I do if I suspect unauthorized access to my account?",
+    "answer": "If you suspect unauthorized activity, immediately change your password, enable Two-Factor Authentication, and terminate all active sessions via Security Settings. Contact our security team immediately at security@shopglide.com so we can audit your account logs.",
+    "tags": [
+      "hacked account",
+      "unauthorized login",
+      "compromised security",
+      "account breach"
+    ]
+  },
+  {
+    "id": "int_01",
+    "category": "integrations",
+    "question": "How do I integrate ShopGlide with Shopify?",
+    "answer": "Integrating with Shopify is simple: Visit the Shopify App Store, search for 'ShopGlide', and click 'Install'. Follow the prompts to authorize the connection. Once linked, your Shopify catalog, inventory, and order details will automatically sync with ShopGlide in real time.",
+    "tags": [
+      "shopify integration",
+      "app store",
+      "sync inventory",
+      "shopify setup"
+    ]
+  },
+  {
+    "id": "int_02",
+    "category": "integrations",
+    "question": "Where can I find my API keys and API documentation?",
+    "answer": "Developers can find API keys by navigating to Developer Settings > API Keys in the ShopGlide dashboard. You can generate separate keys for development and production. Full API documentation, endpoints, and code examples are available at developers.shopglide.com.",
+    "tags": [
+      "api keys",
+      "developer documentation",
+      "api endpoints",
+      "token generation"
+    ]
+  },
+  {
+    "id": "int_03",
+    "category": "integrations",
+    "question": "How do I configure Webhooks?",
+    "answer": "Webhooks allow real-time notifications for events like 'order.created' or 'payment.succeeded'. To configure webhooks, go to Developer Settings > Webhooks, click 'Add Endpoint', enter your destination URL, and select the events you wish to subscribe to. Secure your endpoint using the signing secret provided.",
+    "tags": [
+      "webhooks setup",
+      "event listener",
+      "http post notifications",
+      "signing secret"
+    ]
+  },
+  {
+    "id": "part_01",
+    "category": "partners",
+    "question": "How do I join the ShopGlide Affiliate Partner Program?",
+    "answer": "You can apply for our Affiliate Program at shopglide.com/partners/affiliate. We welcome content creators, marketers, and bloggers. Once approved, you will receive a unique referral link and earn a 15% recurring commission on all new customers you refer for their first 12 months.",
+    "tags": [
+      "affiliate program",
+      "partner sign up",
+      "referral link",
+      "commission rates"
+    ]
+  },
+  {
+    "id": "part_02",
+    "category": "partners",
+    "question": "What are the reseller partner tier requirements?",
+    "answer": "Our Reseller Partner Program has three tiers: Silver (under $10k annual sales, 10% discount), Gold ($10k-$50k annual sales, 20% discount + dedicated support), and Platinum (over $50k annual sales, 30% discount + co-selling benefits). Tier status is reviewed annually in January.",
+    "tags": [
+      "reseller tiers",
+      "partner levels",
+      "wholesale discount",
+      "sales requirements"
+    ]
+  },
+  {
+    "id": "part_03",
+    "category": "partners",
+    "question": "Can we run co-marketing campaigns with ShopGlide?",
+    "answer": "Absolutely! We collaborate with Gold and Platinum partners on webinars, blog features, and joint case studies. To pitch a co-marketing campaign, email your partner account manager or submit a proposal via our portal at partners.shopglide.com/marketing.",
+    "tags": [
+      "co-marketing",
+      "joint webinar",
+      "case studies",
+      "marketing collaboration"
+    ]
+  }
+]

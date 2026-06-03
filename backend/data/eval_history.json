@@ -1,0 +1,598 @@
+[
+  {
+    "timestamp": "2026-06-03 09:27:26",
+    "engine_mode": "mock",
+    "total_queries": 20,
+    "metrics": {
+      "precision_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "mrr": 1.0,
+      "refusal_accuracy": 0.6666666666666666,
+      "answer_faithfulness": 0.7157219884644869,
+      "avg_latency_retrieval_ms": 0.04258500994183123,
+      "avg_latency_generation_ms": 0.01254000817425549,
+      "avg_latency_total_ms": 0.05598001298494637
+    },
+    "query_details": [
+      {
+        "query": "Do you accept VISA or Mastercard?",
+        "expected": "bill_01",
+        "retrieved": [
+          "bill_01",
+          "ship_02",
+          "ship_04"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7555555555555555,
+        "latency_ms": 0.12179999612271786
+      },
+      {
+        "query": "I want a refund for my order",
+        "expected": "bill_02",
+        "retrieved": [
+          "bill_02",
+          "ship_03",
+          "ship_04"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7,
+        "latency_ms": 0.07740000728517771
+      },
+      {
+        "query": "My credit card was declined, why?",
+        "expected": "bill_03",
+        "retrieved": [
+          "bill_03",
+          "bill_01",
+          "bill_04"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7560975609756098,
+        "latency_ms": 0.07010006811469793
+      },
+      {
+        "query": "How do I download invoice PDF?",
+        "expected": "bill_04",
+        "retrieved": [
+          "bill_04",
+          "ship_03",
+          "int_03"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.65625,
+        "latency_ms": 0.04449998959898949
+      },
+      {
+        "query": "How long does standard delivery take?",
+        "expected": "ship_01",
+        "retrieved": [
+          "ship_01",
+          "ship_02",
+          "bill_04"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7560975609756098,
+        "latency_ms": 0.04379998426884413
+      },
+      {
+        "query": "Do you deliver to Canada or Europe?",
+        "expected": "ship_02",
+        "retrieved": [
+          "ship_02",
+          "ship_04",
+          "sec_03"
+        ],
+        "refused": true,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.0,
+        "latency_ms": 0.03899994771927595
+      },
+      {
+        "query": "Where is my package tracking code?",
+        "expected": "ship_03",
+        "retrieved": [
+          "ship_03",
+          "ship_04",
+          "int_02"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7142857142857143,
+        "latency_ms": 0.06580003537237644
+      },
+      {
+        "query": "My package arrived broken",
+        "expected": "ship_04",
+        "retrieved": [
+          "ship_04",
+          "ship_03",
+          "bill_04"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7619047619047619,
+        "latency_ms": 0.055299955420196056
+      },
+      {
+        "query": "How to turn on two factor authentication?",
+        "expected": "sec_01",
+        "retrieved": [
+          "sec_01",
+          "sec_03",
+          "bill_04"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.6842105263157895,
+        "latency_ms": 0.043500098399817944
+      },
+      {
+        "query": "I forgot my password, how to reset?",
+        "expected": "sec_02",
+        "retrieved": [
+          "sec_02",
+          "sec_03",
+          "bill_04"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.6111111111111112,
+        "latency_ms": 0.06850005593150854
+      },
+      {
+        "query": "I think someone hacked my account",
+        "expected": "sec_03",
+        "retrieved": [
+          "sec_03",
+          "sec_01",
+          "sec_02"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7317073170731707,
+        "latency_ms": 0.04090007860213518
+      },
+      {
+        "query": "Can I sync ShopGlide with Shopify?",
+        "expected": "int_01",
+        "retrieved": [
+          "int_01",
+          "part_03",
+          "bill_02"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7297297297297297,
+        "latency_ms": 0.04509999416768551
+      },
+      {
+        "query": "Where can I find my developer API keys?",
+        "expected": "int_02",
+        "retrieved": [
+          "int_02",
+          "ship_03",
+          "bill_02"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.65625,
+        "latency_ms": 0.050200033001601696
+      },
+      {
+        "query": "How to set up webhooks?",
+        "expected": "int_03",
+        "retrieved": [
+          "int_03",
+          "part_01",
+          "sec_03"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7317073170731707,
+        "latency_ms": 0.038800062611699104
+      },
+      {
+        "query": "How to sign up for affiliate program?",
+        "expected": "part_01",
+        "retrieved": [
+          "part_01",
+          "sec_03",
+          "bill_04"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7380952380952381,
+        "latency_ms": 0.0657000346109271
+      },
+      {
+        "query": "What is the gold partner discount?",
+        "expected": "part_02",
+        "retrieved": [
+          "part_02",
+          "part_01",
+          "ship_04"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7317073170731707,
+        "latency_ms": 0.07429998368024826
+      },
+      {
+        "query": "Can we do co-marketing webinars?",
+        "expected": "part_03",
+        "retrieved": [
+          "part_03",
+          "bill_02",
+          "int_02"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7368421052631579,
+        "latency_ms": 0.08839997462928295
+      },
+      {
+        "query": "What is the weather in Paris today?",
+        "expected": "REFUSE",
+        "retrieved": [
+          "ship_04",
+          "part_02",
+          "ship_01"
+        ],
+        "refused": false,
+        "correct": false,
+        "latency_ms": 0.04069996066391468
+      },
+      {
+        "query": "Who won the super bowl in 2024?",
+        "expected": "REFUSE",
+        "retrieved": [
+          "part_02",
+          "part_01",
+          "ship_01"
+        ],
+        "refused": true,
+        "correct": true,
+        "latency_ms": 0.03759993705898523
+      },
+      {
+        "query": "Tell me a joke about robots",
+        "expected": "REFUSE",
+        "retrieved": [],
+        "refused": true,
+        "correct": true,
+        "latency_ms": 0.008200062438845634
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-03 09:28:27",
+    "engine_mode": "mock",
+    "total_queries": 20,
+    "metrics": {
+      "precision_at_1": 0.9411764705882353,
+      "recall_at_3": 0.9411764705882353,
+      "mrr": 0.9411764705882353,
+      "refusal_accuracy": 1.0,
+      "answer_faithfulness": 0.7240970659500644,
+      "avg_latency_retrieval_ms": 0.0237650063354522,
+      "avg_latency_generation_ms": 0.006534997373819351,
+      "avg_latency_total_ms": 0.030985003104433417
+    },
+    "query_details": [
+      {
+        "query": "Do you accept VISA or Mastercard?",
+        "expected": "bill_01",
+        "retrieved": [
+          "bill_01",
+          "bill_02",
+          "bill_03"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7674418604651163,
+        "latency_ms": 0.05600007716566324
+      },
+      {
+        "query": "I want a refund for my order",
+        "expected": "bill_02",
+        "retrieved": [
+          "bill_02",
+          "ship_03",
+          "ship_04"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7297297297297297,
+        "latency_ms": 0.046600005589425564
+      },
+      {
+        "query": "My credit card was declined, why?",
+        "expected": "bill_03",
+        "retrieved": [
+          "bill_03",
+          "bill_01",
+          "bill_02"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.75,
+        "latency_ms": 0.03700004890561104
+      },
+      {
+        "query": "How do I download invoice PDF?",
+        "expected": "bill_04",
+        "retrieved": [
+          "bill_04",
+          "bill_01",
+          "bill_02"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.6785714285714286,
+        "latency_ms": 0.03450002986937761
+      },
+      {
+        "query": "How long does standard delivery take?",
+        "expected": "ship_01",
+        "retrieved": [
+          "ship_01",
+          "ship_02",
+          "bill_01"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7692307692307693,
+        "latency_ms": 0.03799994010478258
+      },
+      {
+        "query": "Do you deliver to Canada or Europe?",
+        "expected": "ship_02",
+        "retrieved": [],
+        "refused": true,
+        "p1": 0,
+        "r3": 0,
+        "mrr": 0,
+        "faithfulness": 0.0,
+        "latency_ms": 0.009699957445263863
+      },
+      {
+        "query": "Where is my package tracking code?",
+        "expected": "ship_03",
+        "retrieved": [
+          "ship_03",
+          "ship_04",
+          "bill_01"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.6875,
+        "latency_ms": 0.03270001616328955
+      },
+      {
+        "query": "My package arrived broken",
+        "expected": "ship_04",
+        "retrieved": [
+          "ship_04",
+          "ship_03",
+          "bill_01"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7368421052631579,
+        "latency_ms": 0.030800001695752144
+      },
+      {
+        "query": "How to turn on two factor authentication?",
+        "expected": "sec_01",
+        "retrieved": [
+          "sec_01",
+          "bill_01",
+          "bill_02"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.6944444444444444,
+        "latency_ms": 0.03530003596097231
+      },
+      {
+        "query": "I forgot my password, how to reset?",
+        "expected": "sec_02",
+        "retrieved": [
+          "sec_02",
+          "bill_01",
+          "bill_02"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.65625,
+        "latency_ms": 0.0350000336766243
+      },
+      {
+        "query": "I think someone hacked my account",
+        "expected": "sec_03",
+        "retrieved": [
+          "sec_03",
+          "sec_01",
+          "sec_02"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7105263157894737,
+        "latency_ms": 0.03499991726130247
+      },
+      {
+        "query": "Can I sync ShopGlide with Shopify?",
+        "expected": "int_01",
+        "retrieved": [
+          "int_01",
+          "part_01",
+          "part_03"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7352941176470589,
+        "latency_ms": 0.03550003748387098
+      },
+      {
+        "query": "Where can I find my developer API keys?",
+        "expected": "int_02",
+        "retrieved": [
+          "int_02",
+          "ship_03",
+          "bill_01"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.6896551724137931,
+        "latency_ms": 0.03729993477463722
+      },
+      {
+        "query": "How to set up webhooks?",
+        "expected": "int_03",
+        "retrieved": [
+          "int_03",
+          "part_01",
+          "bill_01"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7435897435897436,
+        "latency_ms": 0.031100003980100155
+      },
+      {
+        "query": "How to sign up for affiliate program?",
+        "expected": "part_01",
+        "retrieved": [
+          "part_01",
+          "bill_01",
+          "bill_02"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7631578947368421,
+        "latency_ms": 0.03759993705898523
+      },
+      {
+        "query": "What is the gold partner discount?",
+        "expected": "part_02",
+        "retrieved": [
+          "part_02",
+          "part_01",
+          "bill_01"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7435897435897436,
+        "latency_ms": 0.03220001235604286
+      },
+      {
+        "query": "Can we do co-marketing webinars?",
+        "expected": "part_03",
+        "retrieved": [
+          "part_03",
+          "bill_01",
+          "bill_02"
+        ],
+        "refused": false,
+        "p1": 1,
+        "r3": 1,
+        "mrr": 1.0,
+        "faithfulness": 0.7297297297297297,
+        "latency_ms": 0.031000003218650818
+      },
+      {
+        "query": "What is the weather in Paris today?",
+        "expected": "REFUSE",
+        "retrieved": [],
+        "refused": true,
+        "correct": true,
+        "latency_ms": 0.009300070814788342
+      },
+      {
+        "query": "Who won the super bowl in 2024?",
+        "expected": "REFUSE",
+        "retrieved": [],
+        "refused": true,
+        "correct": true,
+        "latency_ms": 0.00800006091594696
+      },
+      {
+        "query": "Tell me a joke about robots",
+        "expected": "REFUSE",
+        "retrieved": [],
+        "refused": true,
+        "correct": true,
+        "latency_ms": 0.0070999376475811005
+      }
+    ]
+  }
+]
