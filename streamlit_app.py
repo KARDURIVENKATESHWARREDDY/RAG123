@@ -46,7 +46,12 @@ def set_sample_question(item):
 
 with st.sidebar:
     st.header("Ask a question")
-    st.text_input("Type your question here", key="user_query")
+    st.text_input(
+        "Type your question here",
+        key="user_query",
+        on_change=submit_question,
+        help="Press Enter to submit your question.",
+    )
     st.button("Send", on_click=submit_question)
 
     st.markdown("---")
@@ -67,6 +72,14 @@ with st.sidebar:
         "This app uses the same FAQ dataset and TF-IDF retrieval logic as the repository's backend. "
         "For the full React frontend experience, run the backend locally and visit `http://localhost:8000`."
     )
+
+st.markdown("### Recent questions")
+recent = list(reversed(st.session_state["history"]))[:5]
+if recent:
+    for entry in recent:
+        st.write(f"- {entry['question']}")
+else:
+    st.info("No recent questions yet. Ask one from the sidebar.")
 
 st.markdown("### Chat history")
 if not st.session_state.history:
