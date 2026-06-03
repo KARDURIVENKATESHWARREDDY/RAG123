@@ -1,4 +1,5 @@
 import os
+import requests
 import streamlit as st
 import streamlit.components.v1 as components
 
@@ -14,19 +15,34 @@ st.markdown(
 )
 
 st.info(
-    "The Streamlit wrapper can be used as a deployment landing page, and it will embed the app below when the backend is reachable from this environment."
+    "The Streamlit wrapper can be used as a deployment landing page and will only embed the app when it is reachable from this environment."
 )
 
 st.markdown("### App access")
-st.markdown(
-    f"*Try the hosted app at* [{APP_URL}]({APP_URL})"
-)
+st.markdown(f"*Try the hosted app at* [{APP_URL}]({APP_URL})")
 
-st.markdown("### Embedded preview")
-components.html(
-    f"<iframe src=\"{APP_URL}\" width=100% height=900 style=\"border:none;\"></iframe>",
-    height=920,
-)
+reachable = False
+try:
+    response = requests.get(APP_URL, timeout=3)
+    reachable = response.status_code < 500
+except requests.RequestException:
+    reachable = False
+
+if reachable:
+    st.markdown("### Embedded preview")
+    components.html(
+        f"<iframe src=\"{APP_URL}\" width=100% height=900 style=\"border:none;\"></iframe>",
+        height=920,
+    )
+else:
+    st.warning(
+        "The app is not reachable from the Streamlit environment. "
+        "Please set `APP_URL` to the externally accessible application URL or run the FastAPI backend locally first."
+    )
+    st.info(
+        "If you are deploying on Streamlit, use an externally reachable host URL rather than `localhost`, "
+        "and verify the target allows iframe embedding."
+    )
 
 st.markdown("### Local run instructions")
 st.code(
