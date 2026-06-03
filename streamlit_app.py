@@ -21,25 +21,37 @@ def get_engine():
 engine = get_engine()
 
 if "history" not in st.session_state:
-    st.session_state.history = []
+    st.session_state["history"] = []
+if "user_query" not in st.session_state:
+    st.session_state["user_query"] = ""
+
+
+def submit_question():
+    question = st.session_state["user_query"].strip()
+    if not question:
+        return
+
+    results = engine.search(question, top_k=3)
+    response = engine.generate_answer(question, results)
+    st.session_state["history"].append({
+        "question": question,
+        "response": response,
+        "results": results,
+    })
+    st.session_state["user_query"] = ""
+
+
+def set_sample_question(item):
+    st.session_state["user_query"] = item
 
 with st.sidebar:
     st.header("Ask a question")
-    query = st.text_input("Type your question here", key="user_query")
-    if st.button("Send"):
-        question = query.strip()
-        if question:
-            results = engine.search(question, top_k=3)
-            response = engine.generate_answer(question, results)
-            st.session_state.history.append({
-                "question": question,
-                "response": response,
-                "results": results,
-            })
-            st.session_state.user_query = ""
+    st.text_input("Type your question here", key="user_query")
+    st.button("Send", on_click=submit_question)
 
     st.markdown("---")
     st.markdown("### Sample questions")
+
     sample_questions = [
         "What payment methods do you accept?",
         "How can I request a refund?",
@@ -47,9 +59,8 @@ with st.sidebar:
         "How do I enable two-factor authentication?",
         "Can ShopGlide integrate with Shopify?",
     ]
-    for item in sample_questions:
-        if st.button(item, key=item):
-            st.session_state.user_query = item
+    for idx, item in enumerate(sample_questions):
+        st.button(item, key=f"sample_{idx}", on_click=set_sample_question, args=(item,))
 
     st.markdown("---")
     st.markdown(
